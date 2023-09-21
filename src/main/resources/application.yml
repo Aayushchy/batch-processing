@@ -14,7 +14,7 @@ spring:
     job:
       enabled: false
 #external:
-#  password: ${external.password}
+##  password: ${external.password}
 external:
   property:
     file:
