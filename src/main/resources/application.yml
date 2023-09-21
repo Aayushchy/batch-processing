@@ -1,0 +1,27 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test_db
+    username: root
+    password: ${database.password}
+  jpa:
+    hibernate:
+      ddl-auto: update
+  batch:
+    jdbc:
+      initialize-schema: ALWAYS
+    job:
+      enabled: false
+#external:
+#  password: ${external.password}
+external:
+  property:
+    file:
+      path: file:/C:/Users/ThinkPad/Documents/Property_File/encryption/src/main/resources/external_application.properties
+    database:
+      password: ${database.password}
+    jwt:
+      key: ${jwt.key}
+encryption:
+  key: ${ENCRYPTION_KEY}
