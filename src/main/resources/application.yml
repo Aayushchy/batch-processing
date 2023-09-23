@@ -4,7 +4,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/test_db
     username: root
-    password: ${database.password}
+    password: ${external.database.password}
   jpa:
     hibernate:
       ddl-auto: update
@@ -20,8 +20,8 @@ external:
     file:
       path: file:/C:/Users/ThinkPad/Documents/Property_File/encryption/src/main/resources/external_application.properties
     database:
-      password: ${database.password}
+      password: ${external.database.password}
     jwt:
-      key: ${jwt.key}
+      key: ${external.jwt.key}
 encryption:
   key: ${ENCRYPTION_KEY}
